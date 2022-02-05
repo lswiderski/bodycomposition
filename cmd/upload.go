@@ -4,7 +4,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/davidkroell/bodycomposition"
+	"github.com/lswiderski/bodycomposition"
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/spf13/cobra"
@@ -69,8 +69,8 @@ func init() {
 	flags.Float64P("weight", "w", -1, "Set your weight in kilograms")
 	flags.Float64P("fat", "f", 0, "Set your fat in percent")
 	flags.Float64("hydration", 0, "Set your hydration in percent")
-	flags.Float64P("bone", "b", 0, "Set your bone mass in percent")
-	flags.Float64P("muscle", "m", 0, "Set your muscle mass in percent")
+	flags.Float64P("bone", "b", 0, "Set your bone mass in kilograms")
+	flags.Float64P("muscle", "m", 0, "Set your muscle mass in kilograms")
 	flags.Float64P("calories", "c", 0, "Set your caloric intake")
 	flags.Float64("visceral-fat", 0, "Set your visceral fat rating (valid values: 1-60)")
 	flags.Float64("metabolic-age", 0, "Set your metabolic age")

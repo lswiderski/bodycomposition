@@ -14,8 +14,8 @@ type BodyComposition struct {
 	Weight            float64
 	PercentFat        float64
 	PercentHydration  float64
-	PercentBone       float64
-	PercentMuscle     float64
+	BoneMass          float64
+	MuscleMass        float64
 	VisceralFatRating float64
 	PhysiqueRating    float64
 	MetabolicAge      float64
@@ -40,8 +40,8 @@ func (bc BodyComposition) writeFitFile(writer io.Writer) error {
 			Weight:            fit.Weight(bc.Weight * 100),
 			PercentFat:        uint16(bc.PercentFat * 100),
 			PercentHydration:  uint16(bc.PercentHydration * 100),
-			BoneMass:          uint16(bc.Weight * bc.PercentBone),
-			MuscleMass:        uint16(bc.Weight * bc.PercentMuscle),
+			BoneMass:          uint16(bc.BoneMass * 100),
+			MuscleMass:        uint16(bc.MuscleMass * 100),
 			VisceralFatRating: uint8(bc.VisceralFatRating),
 			PhysiqueRating:    uint8(bc.PhysiqueRating),
 			MetabolicAge:      uint8(bc.MetabolicAge),
@@ -54,7 +54,7 @@ func (bc BodyComposition) writeFitFile(writer io.Writer) error {
 }
 
 // NewBodyComposition creates a new BodyComposition instance
-func NewBodyComposition(weight, percentFat, percentHydration, percentBone, percentMuscle, visceralFatRating, physiqueRating, metabolicAge, caloriesActiveMet, bmi float64, timestamp int64) BodyComposition {
+func NewBodyComposition(weight, percentFat, percentHydration, boneMass, muscleMass, visceralFatRating, physiqueRating, metabolicAge, caloriesActiveMet, bmi float64, timestamp int64) BodyComposition {
 	ts := time.Now()
 	if timestamp != -1 {
 		ts = time.Unix(timestamp, 0)
@@ -65,8 +65,8 @@ func NewBodyComposition(weight, percentFat, percentHydration, percentBone, perce
 		Weight:            weight,
 		PercentFat:        percentFat,
 		PercentHydration:  percentHydration,
-		PercentBone:       percentBone,
-		PercentMuscle:     percentMuscle,
+		BoneMass:          boneMass,
+		MuscleMass:        muscleMass,
 		VisceralFatRating: visceralFatRating,
 		PhysiqueRating:    physiqueRating,
 		MetabolicAge:      metabolicAge,

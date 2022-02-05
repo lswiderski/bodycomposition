@@ -1,4 +1,4 @@
-module github.com/davidkroell/bodycomposition
+module github.com/lswiderski/bodycomposition
 
 go 1.15
 
