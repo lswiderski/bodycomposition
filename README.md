@@ -17,7 +17,7 @@ Garmin Connect Cloud (https://connect.garmin.com) from your beloved commandline.
 For now, you can just add body composition values. Any other thing should be done in Garmin Connect.
 
 ## Fork
-This is forked version of bodycompositions from [https://github.com/davidkroell/bodycomposition](https://github.com/davidkroell/bodycomposition)
+This is forked version of bodycomposition from [https://github.com/davidkroell/bodycomposition](https://github.com/davidkroell/bodycomposition)
 
 I changed the input of bone mass and muscle mass from percent to kilograms so as not to convert my scale result to percentages.
 
