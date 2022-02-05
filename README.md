@@ -1,12 +1,12 @@
 <p align="center">
 
-[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/davidkroell/bodycomposition/Go%20build%20and%20test)](https://github.com/davidkroell/bodycomposition/actions/workflows/build.yml)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/davidkroell/bodycomposition)](https://github.com/davidkroell/bodycomposition/releases/latest)
-[![GitHub go.mod Go version (subdirectory of monorepo)](https://img.shields.io/github/go-mod/go-version/davidkroell/bodycomposition)](https://github.com/davidkroell/bodycomposition/blob/master/go.mod)
-[![Go Report Card](https://goreportcard.com/badge/github.com/davidkroell/bodycomposition)](https://goreportcard.com/report/github.com/davidkroell/bodycomposition)
-[![Go Reference](https://pkg.go.dev/badge/github.com/davidkroell/bodycomposition.svg)](https://pkg.go.dev/github.com/davidkroell/bodycomposition)
-[![GitHub all releases](https://img.shields.io/github/downloads/davidkroell/bodycomposition/total?color=orange)](https://github.com/davidkroell/bodycomposition/releases)
-[![GitHub license](https://img.shields.io/github/license/davidkroell/bodycomposition)](https://github.com/davidkroell/bodycomposition/blob/master/LICENSE)
+[![GitHub Workflow Status](https://img.shields.io/github/workflow/status/lswiderski/bodycomposition/Go%20build%20and%20test)](https://github.com/lswiderski/bodycomposition/actions/workflows/build.yml)
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/lswiderski/bodycomposition)](https://github.com/lswiderski/bodycomposition/releases/latest)
+[![GitHub go.mod Go version (subdirectory of monorepo)](https://img.shields.io/github/go-mod/go-version/lswiderski/bodycomposition)](https://github.com/lswiderski/bodycomposition/blob/master/go.mod)
+[![Go Report Card](https://goreportcard.com/badge/github.com/lswiderski/bodycomposition)](https://goreportcard.com/report/github.com/lswiderski/bodycomposition)
+[![Go Reference](https://pkg.go.dev/badge/github.com/lswiderski/bodycomposition.svg)](https://pkg.go.dev/github.com/lswiderski/bodycomposition)
+[![GitHub all releases](https://img.shields.io/github/downloads/lswiderski/bodycomposition/total?color=orange)](https://github.com/lswiderski/bodycomposition/releases)
+[![GitHub license](https://img.shields.io/github/license/lswiderski/bodycomposition)](https://github.com/lswiderski/bodycomposition/blob/master/LICENSE)
 
 </p>
 
@@ -16,9 +16,13 @@ Garmin Connect Cloud (https://connect.garmin.com) from your beloved commandline.
 
 For now, you can just add body composition values. Any other thing should be done in Garmin Connect.
 
+## Fork
+This is forked version of bodycompositions from [https://github.com/davidkroell/bodycomposition](https://github.com/davidkroell/bodycomposition)
+
+I changed the input of bone mass and muscle mass from percent to kilograms so as not to convert my scale result to percentages.
 
 ## Download
-Releases can be found in [release](https://github.com/davidkroell/bodycomposition/releases) tab.
+Releases can be found in [release](https://github.com/lswiderski/bodycomposition/releases) tab.
 
 
 ## Usage
@@ -64,14 +68,14 @@ Aliases:
 
 Flags:
       --bmi float               Set your BMI - body mass index
-  -b, --bone float              Set your bone mass in percent
+  -b, --bone float              Set your bone mass in kilograms
   -c, --calories float          Set your caloric intake
   -e, --email string            Email of the Garmin account
   -f, --fat float               Set your fat in percent
   -h, --help                    help for upload
       --hydration float         Set your hydration in percent
       --metabolic-age float     Set your metabolic age
-  -m, --muscle float            Set your muscle mass in percent
+  -m, --muscle float            Set your muscle mass in kilograms
   -p, --password string         Password of the Garmin account
       --physique-rating float   Set your physique rating (valid values: 1-9)
   -t, --unix-timestamp int      Set the timestamp of the measurement (default -1)
