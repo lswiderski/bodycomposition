@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/davidkroell/bodycomposition/cmd"
+	"github.com/lswiderski/bodycomposition/cmd"
 )
 
 func main() {

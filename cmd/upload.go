@@ -4,7 +4,7 @@ import (
 	"os"
 	"syscall"
 
-	"github.com/davidkroell/bodycomposition"
+	"github.com/lswiderski/bodycomposition"
 	"golang.org/x/crypto/ssh/terminal"
 
 	"github.com/spf13/cobra"
